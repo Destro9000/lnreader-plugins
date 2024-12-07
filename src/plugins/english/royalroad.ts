@@ -258,7 +258,8 @@ class RoyalRoad implements Plugin.PluginBase {
     searchTerm: string,
     page: number,
   ): Promise<Plugin.NovelItem[]> {
-    const searchUrl = `${this.site}fictions/search?page=${page}&title=${searchTerm}`;
+    let searchUrl = `${this.site}fictions/search?page=${page}&title=${searchTerm}`;
+    searchUrl += `?page=${page}`
 
     const body = await fetchApi(searchUrl).then(r => r.text());
     return this.parseNovels(body);
