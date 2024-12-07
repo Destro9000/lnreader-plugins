@@ -7,7 +7,7 @@ import { NovelStatus } from '@libs/novelStatus';
 class RoyalRoad implements Plugin.PluginBase {
   id = 'royalroad';
   name = 'Royal Road';
-  version = '2.1.2';
+  version = '2.1.3';
   icon = 'src/en/royalroad/icon.png';
   site = 'https://www.royalroad.com/';
 
